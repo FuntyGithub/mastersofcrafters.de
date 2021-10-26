@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+        <title>Funty</title>
+        <script src="https://kit.fontawesome.com/e818a9840c.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="./assets/logo.png">
+   </head>
+   <body>
+        <div class='navbar no-items section' id='navbar'></div>
+        <img alt='Logo' id='logo' src='https://funty.org/assets/logo.png'/>
+        <spam id='Name'>Welcome to Network.Funty.org</spam>
+        <spam id='subtitle'>This website list all social media sites from Funty´s Netzwerk.</spam>
+        <div id='links'>
+            <a class='link' href='https://discord.com/invite/EjQh3HsbSm'><i aria-hidden='true'></i>Discord</a>
+            <a class='link' href='https://www.guilded.gg/FuntysNetzwerk'><i aria-hidden='true'></i>Guilded (work in progress)</a>
+            <hr id='border'>
+            <a class='link2 link' href='https://twitter.com/FuntysNetzwerk'><i aria-hidden='true'></i>Twitter</a>
+            <a class='link2 link' href='https://www.twitch.tv/funtysnetzwerk'><i aria-hidden='true'></i>Twitch</a>
+            <a class='link2 link' href='https://github.com/FuntysNetzwerk'><i aria-hidden='true'></i>Github</a>
+            <a class='link2 link' href='https://www.youtube.com/channel/UCP6davrlvweiSkSxnsyPtBA'><i aria-hidden='true'></i>Youtube</a>
+            <a class='link2 link' href='https://www.reddit.com/user/FuntysNetzwerk'><i aria-hidden='true'></i>Reddit</a>
+        </div>
+        <style>
+            body {
+                background-color: black;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            #logo {
+                width: 96px;
+	            height: 96px;
+	            display: block;
+	            margin: 35px auto 20px;
+	            transition: all 1s;
+            }
+            #logo:hover {
+                -webkit-transition: -webkit-transform .8s ease-in-out;
+                -ms-transition: -ms-transform .8s ease-in-out;
+                transition: transform .8s ease-in-out;
+	            transform:rotate(360deg);
+                -ms-transform:rotate(360deg);
+                -webkit-transform:rotate(360deg);
+            }
+            #Name {
+                color: #fc9434;
+	            font-size: 3rem;
+	            font-weight: 600;
+	            line-height: 1.25;
+	            display: block;
+	            width: 100%;
+	            text-align: center;
+            }
+            #subtitle {
+                color: #d67315;
+	            font-size: 1.5rem;
+	            font-weight: 600;
+	            line-height: 1.25;
+	            display: block;
+	            width: 100%;
+	            text-align: center;
+            }
+            #links {
+                max-width: 675px;
+	            width: auto;
+	            display: block;
+	            margin: 27px auto;
+            }
+            .link {
+                display: block;
+	            background-color: #f3943c;
+	            color: black;
+	            font-family: var(--font);
+	            text-align: center;
+	            margin-bottom: 20px;
+	            padding: 17px;
+	            text-decoration: none;
+	            font-size: 1rem;
+	            font-weight: bold;
+	            transition: all 0.15s;
+	            box-shadow: 0px 6px #ec790d;
+            }
+            .link:hover {
+                box-shadow: 0px 8px #ec7200;
+	            transform: translateY(-2px);
+            }
+            .link:active {
+                transform: translateY(6px);
+	            box-shadow: 0px 0px #f0933c;
+            }
+            .link2 {
+	            background-color: #e99648;
+            }
+            #border {
+                border: 3px solid #ec7200;
+                border-radius: 5px;
+                font-size: 1.5rem;
+            }
+        </style>
+    </body>
+</html>
