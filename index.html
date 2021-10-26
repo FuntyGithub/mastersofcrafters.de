@@ -172,13 +172,13 @@
             let now = new Date().getTime(),
             distance = countDown - now;
 
-        (document.getElementById("days").innerText = Math.abs(Math.floor(distance / day))),
+        (document.getElementById("days").innerText = Math.abs(Math.floor(distance / day)) - 1),
 
-        (document.getElementById("hours").innerText = Math.abs(Math.floor((distance % day) / hour))),
+        (document.getElementById("hours").innerText = Math.abs(Math.floor((distance % day) / hour)) - 1),
 
-        (document.getElementById("minutes").innerText = Math.abs(Math.floor((distance % hour) / minute))),
+        (document.getElementById("minutes").innerText = Math.abs(Math.floor((distance % hour) / minute)) - 1),
         
-        (document.getElementById("seconds").innerText = Math.abs(Math.floor((distance % minute) / second)));
+        (document.getElementById("seconds").innerText = Math.abs(Math.floor((distance % minute) / second)) - 1);
         }, 0)
     }
     var slideIndex = 0;
