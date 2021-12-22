@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="de">
    <head>
         <title>Masters of Crafters</title>
         <script src="https://kit.fontawesome.com/e818a9840c.js" crossorigin="anonymous"></script>
@@ -11,47 +10,31 @@
    </head>
    <body onload="startCounter()">
         <div class='navbar no-items section' id='navbar'></div>
-        <br></br>
+        <br>
         <spam id='title'>Willkommen auf der Website von Masters of Crafters</spam>
-        <br></br>
+        <br>
         <div id='countdown'>
-            <br></br>
+            <br>
             <spam id='subtitle'>Masters of Crafters 2 endete vor:</spam>
             <ul>
-                <li><span id="days"></span>Tage</li>
+                <li><span id="days"></span>Tagen</li>
                 <li><span id="hours"></span>Stunden</li>
                 <li><span id="minutes"></span>Minuten</li>
                 <li><span id="seconds"></span>Sekunden</li>
           </ul>
         </div>
-        <br></br>
-        <div class="slideshow">
-            <img class="slides" src="./assets/slideshow/moc1/1.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc1/2.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc1/3.png" style="width:30%">
-
-            <img class="slides" src="./assets/slideshow/moc2/1.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc2/2.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc2/3.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc2/4.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc2/5.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc2/6.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc2/7.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc2/8.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc2/9.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc2/10.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc2/11.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc2/12.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc2/13.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc2/14.png" style="width:30%">
-            <img class="slides" src="./assets/slideshow/moc2/15.png" style="width:30%">
-        </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <div id ='para'>
+        <br>
+        <center>
+        	<div class="slideshow">
+        		<img id="slideshowdisplay" class="slides" src="./assets/slideshow/moc1/1.png" style="width: 30%;">
+        	</div>
+    	</center>
+        <br>
+        <br>
+        <br>
+        <div id='para'>
             <img id='paraImg' src="./assets/logos/moc2.png" style="width:10%">
-            <div id ='paraText'>
+            <div id='paraText'>
                 <h2 id='paraTitle'>Masters of Crafters 2</h2>
                 <p style="text-align: left;">Konzept: 
                     <span style="color: #fc9434;">SMP</span>
@@ -73,10 +56,10 @@
                 </p>
             </div>
         </div>
-        <br></br>
-        <div id ='para'>
+        <br>
+        <div id='para'>
             <img id='paraImg' src="./assets/logos/moc1.png" style="width:10%">
-            <div id ='paraText'>
+            <div id='paraText'>
                 <h2 id='paraTitle'>Masters of Crafters 1</h2>
                 <p style="text-align: left;">Konzept: 
                     <span style="color: #fc9434;">SMP</span>
@@ -190,27 +173,20 @@
             let now = new Date().getTime(),
             distance = countDown - now;
 
-        (document.getElementById("days").innerText = Math.abs(Math.floor(distance / day)) - 1),
-
-        (document.getElementById("hours").innerText = Math.abs(Math.floor((distance % day) / hour)) - 1),
-
-        (document.getElementById("minutes").innerText = Math.abs(Math.floor((distance % hour) / minute)) - 1),
-        
-        (document.getElementById("seconds").innerText = Math.abs(Math.floor((distance % minute) / second)) - 1);
+	        document.getElementById("days").innerText = Math.abs(Math.floor(distance / day)) - 1
+	        document.getElementById("hours").innerText = Math.abs(Math.floor((distance % day) / hour)) - 1
+	        document.getElementById("minutes").innerText = Math.abs(Math.floor((distance % hour) / minute)) - 1
+	        document.getElementById("seconds").innerText = Math.abs(Math.floor((distance % minute) / second)) - 1;
         }, 0)
     }
-    var slideIndex = 0;
-    slideshow();
 
+    var slideIndex = 1;
+    setInterval(slideshow, 2000);
     function slideshow() {
-        var i;
-        var x = document.getElementsByClassName("slides");
-        for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > x.length) {slideIndex = 1}
-        x[slideIndex-1].style.display = "block";
-        setTimeout(slideshow, 2000);
+        var slide = document.getElementById("slideshowdisplay");
+        if (slideIndex <= 3) slide.src = "./assets/slideshow/moc1/" + slideIndex++ + ".png";
+        else if (slideIndex >= 4 && slideIndex <= 15) slide.src = "./assets/slideshow/moc2/" + (slideIndex++ - 3) + ".png";
+
+        if (slideIndex > 15) slideIndex = 1;
     }
 </script>
