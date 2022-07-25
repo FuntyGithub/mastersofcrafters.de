@@ -1,0 +1,136 @@
+body {
+    background-color: #050505;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#title {
+    color: #fc9434;
+    font-size: 1.5cm;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+#name {
+    color: #fc9434;
+    font-size: 2cm;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: -1cm;
+}
+
+#subtitle {
+    color: #d4761d;
+    font-size: 3rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#countdown {
+    color: #d4761d;
+    margin: 0 auto;
+    text-align: center;
+    border: 4px dashed #261505
+}
+
+h1 {
+    font-weight: 600;
+    letter-spacing: 0.500rem;
+    font-size: 3.0em;
+    text-transform: uppercase;
+}
+
+li {
+    display: inline-block;
+    font-size: 2.0em;
+    list-style-type: none;
+    padding: 2em;
+    text-transform: uppercase;
+}
+
+li span {
+    display: block;
+    font-size: 3.5rem;
+}
+
+.slides {
+    margin-right: 15%;
+    border: 4px solid #BC681A
+}
+
+#para {
+    color: #d4761d;
+    border: 4px dashed #261505;
+    text-align: left;
+    height: 275px;
+}
+
+#paraImg {
+    display: inline-block;
+    padding: 30px;
+}
+
+#paraTitle {
+    font-size: 2rem;
+    display: block;
+}
+
+#paraDescription {
+    font-size: 1rem;
+    display: block;
+}
+
+#paraText{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#images {
+    display: inline-block;
+    vertical-align: top;
+
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    /* border: #d4761d solid 1px; */
+    /* box-shadow: #BC681A 0px 0px 10px; */
+
+    width: 65%;
+    height: 80%;
+}
+
+.image {
+    
+    transition: transform 1s;
+}
+
+.image:hover {
+    transition: transform 2s;
+    border: #d4761d solid 1px;
+    box-shadow: #BC681A 0px 0px 10px;
+    transform: scale(10);
+}
+
+.slideshow{
+    height: 400px;
+}
+
+/* #prev, #next {
+    font-size: 3cm;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    color: #fc9434;
+    cursor:pointer;
+    
+    top: 100%;
+    transform: translateY(-100%);
+
+}
+
+#prev:hover, #next:hover{
+    color: #BC681A;
+} */

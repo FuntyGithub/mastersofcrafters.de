@@ -1,9 +1,22 @@
+<!-- 
+
+
+    
+Was suchst du denn hier?
+Alles was ausmakiert ist, ist eine angefangene Idee, welche noch nicht fertig ist! 
+
+
+-->
+
+
 <!DOCTYPE html>
 <html lang="de">
    <head>
         <title>Masters of Crafters</title>
+        <script src="script.js"></script>
         <script src="https://kit.fontawesome.com/e818a9840c.js" crossorigin="anonymous"></script>
         <link rel="icon" href="https://funty.org/assets/logo.png">
+        <link rel="stylesheet" href="style.css">
         <meta name="author" content="Funty" />
         <meta name="description" content="Die offizielle Website für die Minecraft Projektreihe &bdquo;Masters of Crafters&ldquo;" />
         <meta name="keywords" content="funty, Masters of Crafters, moc, Website, Minecraft, Projekt, reihe, offiziell" />
@@ -11,11 +24,15 @@
    <body onload="startCounter()">
         <div class='navbar no-items section' id='navbar'></div>
         <br>
-        <spam id='title'>Willkommen auf der Website von Masters of Crafters</spam>
+        <spam id='title'>Willkommen auf der Website von</spam>
+        <br>
+        <spam id='name'>Masters of Crafters</spam>
+        
+        <br>
         <br>
         <div id='countdown'>
             <br>
-            <spam id='subtitle'>Masters of Crafters 2 endete vor:</spam>
+            <spam id='subtitle'>Masters of Crafters 3 beginnt in:</spam>
             <ul>
                 <li><span id="days"></span>Tagen</li>
                 <li><span id="hours"></span>Stunden</li>
@@ -26,11 +43,39 @@
         <br>
         <center>
         	<div class="slideshow">
-        		<img id="slideshowdisplay" class="slides" src="./assets/slideshow/moc1/1.png" style="width: 30%;">
+                <!-- <button id="prev" onclick="prevSlide()"><</button> -->
+        		<img id="slideshowdisplay" class="slides" src="./assets/slideshow/moc1/1.png" style="width: 30%;" >
+                <iframe src="https://discord.com/widget?id=962143170051858452&theme=dark" width="350" height="100%" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                <!-- <button id="next" onclick="nextSlide()">></button> -->
         	</div>
     	</center>
         <br>
         <br>
+        <br>
+        <div id='para'>
+            <img id='paraImg' src="./assets/logos/moc3.png" style="width:10%">
+            <div id='paraText'>
+                <h2 id='paraTitle'>Masters of Crafters 3</h2>
+                <p style="text-align: left;">Konzept: 
+                    <span style="color: #fc9434;">SMP</span>
+                    <span style="color: #808080;">(Survival Multiplayer)</span>
+                    <br>Version: 
+                    <span style="color: #fc9434;"></span>
+                    <span style="color: #fc9434;">1.19 Java & Bedrock Editon</span>
+                    <br>Mitspieler¹: 
+                    <span style="color: #fc9434;">?</span>
+                    <br>Von: 
+                    <span style="color: #fc9434;">05.08.2022</span>
+                    <br>Bis: 
+                    <span style="color: #fc9434;">?</span>
+                    <br>Dauer: 
+                    <span style="color: #fc9434;">?</span>
+                </p>
+                <p id='paraDescription'>Download: 
+                </p>
+            </div>
+
+        </div>
         <br>
         <div id='para'>
             <img id='paraImg' src="./assets/logos/moc2.png" style="width:10%">
@@ -82,111 +127,18 @@
                     <a style="color: #fc9434;" href="https://download943.mediafire.com/ytywz3kt7l3g/17xyum8zoxpycgu/end.zip">END</a>
                 </p>
             </div>
+        
+
+            <!-- <div id="images">
+                <img  class="image" src="./assets/slideshow/moc1/1.png" style="width:10%">
+                <img  class="image" src="./assets/slideshow/moc1/2.png" style="width:10%">
+                <img  class="image" src="./assets/slideshow/moc1/3.png" style="width:10%">
+                <img  class="image" src="./assets/slideshow/moc1/4.png" style="width:10%">
+                <img  class="image" src="./assets/slideshow/moc1/5.png" style="width:10%">
+                
+            </div> -->
+            
         </div>
         <p style="color: #808080; font-size: 15px;">¹Anzahl der Accounts auf der Whitelist.</p>
     </body>
 </html>
-<style>
-    body {
-        background-color: black;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-    #title {
-        color: #fc9434;
-        font-size: 3rem;
-        font-weight: 600;
-        line-height: 1.25;
-        display: block;
-        width: 100%;
-        text-align: center;
-        text-decoration: underline
-    }
-    #subtitle {
-        color: #d4761d;
-        font-size: 3rem;
-        font-weight: 600;
-        line-height: 1.25;
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-    #countdown {
-        color: #d4761d;
-        margin: 0 auto;
-        text-align: center;
-        border: 4px dashed #261505
-    }
-    h1 {
-        font-weight: 600;
-        letter-spacing: 0.500rem;
-        font-size: 3.0em;
-        text-transform: uppercase;
-    }
-    li {
-        display: inline-block;
-        font-size: 2.0em;
-        list-style-type: none;
-        padding: 2em;
-        text-transform: uppercase;
-    }
-    li span {
-        display: block;
-        font-size: 3.5rem;
-    }
-    .slides {
-        margin-left: auto;
-        margin-right: auto;
-        border: 4px solid #BC681A
-    }
-    #para{
-        color: #d4761d;
-        border: 4px dashed #261505;
-        text-align: left;
-    }
-    #paraImg {
-        display: inline-block;
-        padding: 30px;
-    }
-    #paraTitle {
-        font-size: 2rem;
-        display: block;
-    }
-    #paraDescription {
-        font-size: 1rem;
-        display: block;
-    }
-    #paraText {
-        display: inline-block;
-        vertical-align: top;
-    }
-</style>
-<script>
-    function startCounter() {
-        const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24
-        var x
-        let startday = "Nov 13, 2021 14:38:00",
-        countDown = new Date(startday).getTime()
-        x = setInterval(function () {
-            let now = new Date().getTime(),
-            distance = countDown - now;
-
-	        document.getElementById("days").innerText = Math.abs(Math.floor(distance / day)) - 1
-	        document.getElementById("hours").innerText = Math.abs(Math.floor((distance % day) / hour)) - 1
-	        document.getElementById("minutes").innerText = Math.abs(Math.floor((distance % hour) / minute)) - 1
-	        document.getElementById("seconds").innerText = Math.abs(Math.floor((distance % minute) / second)) - 1;
-        }, 0)
-    }
-
-    var slideIndex = 1;
-    setInterval(slideshow, 2000);
-    function slideshow() {
-        var slide = document.getElementById("slideshowdisplay");
-        if (slideIndex <= 3) slide.src = "./assets/slideshow/moc1/" + slideIndex++ + ".png";
-        else if (slideIndex >= 4 && slideIndex <= 15) slide.src = "./assets/slideshow/moc2/" + (slideIndex++ - 3) + ".png";
-
-        if (slideIndex > 15) slideIndex = 1;
-    }
-</script>
