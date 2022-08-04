@@ -4,7 +4,7 @@ function startCounter() {
     hour = minute * 60,
     day = hour * 24
     var x
-    let startday = "August 05, 2022 00:00:00"//"July 22, 2022 00:00:00"//"August 05, 2022 00:00:00"//"Aug 05, 2022 00:00:00",
+    let startday = "August 05, 2022 00:16:00"//"July 22, 2022 00:00:00"//"August 05, 2022 00:00:00"//"Aug 05, 2022 00:00:00",
     countDown = new Date(startday).getTime()
     x = setInterval(function () {
         let now = new Date().getTime();
