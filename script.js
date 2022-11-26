@@ -4,7 +4,7 @@ function startCounter() {
     hour = minute * 60,
     day = hour * 24
     var x
-    let startday = "August 05, 2022 16:00:00"//"July 22, 2022 00:00:00"//"August 05, 2022 00:00:00"//"Aug 05, 2022 00:00:00",
+    let startday = "November 26, 2022 20:00:00"
     countDown = new Date(startday).getTime()
     x = setInterval(function () {
         let now = new Date().getTime();
@@ -34,24 +34,12 @@ function startCounter() {
 
 var slideIndex = 1;
 setInterval(slideshow, 2000);
+
 function slideshow() {
-    // console.log(slideIndex)
     var slide = document.getElementById("slideshowdisplay");
 
     if (slideIndex <= 3) slide.src = "./assets/slideshow/moc1/" + slideIndex++ + ".png";
     else if (slideIndex >= 4 && slideIndex <= 15) slide.src = "./assets/slideshow/moc2/" + (slideIndex++ - 3) + ".png";
 
     if (slideIndex > 15) slideIndex = 1;
-
 }
-
-
-// function prevSlide() {
-//     Math.abs(slideIndex-2);
-//     slideshow();
-// }
-
-// function nextSlide() {
-//     slideIndex+1;
-//     slideshow();
-// }
