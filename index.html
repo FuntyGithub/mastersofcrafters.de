@@ -1,148 +1,128 @@
 <!-- 
-
-
     
-Was suchst du denn hier?
-Alles was ausmakiert ist, ist eine angefangene Idee, welche noch nicht fertig ist! 
-
+👀 
 
 -->
 
-
 <!DOCTYPE html>
 <html lang="de">
-   <head>
-        <title>Masters of Crafters</title>
-        <script src="script.js"></script>
-        <script src="https://kit.fontawesome.com/e818a9840c.js" crossorigin="anonymous"></script>
-        <link rel="icon" href="https://funty.org/assets/logo.png">
-        <link rel="stylesheet" href="style.css">
-        <meta name="author" content="Funty" />
-        <meta name="description" content="Die offizielle Website für die Minecraft Projektreihe &bdquo;Masters of Crafters&ldquo;" />
-        <meta name="keywords" content="funty, Masters of Crafters, moc, Website, Minecraft, Projekt, reihe, offiziell" />
-   </head>
-   <body onload="startCounter()">
-        <div class='navbar no-items section' id='navbar'></div>
+
+<head>
+    <title>Masters of Crafters</title>
+    <script src="script.js"></script>
+    <script src="./assets/utils.js"></script>
+    <link rel="icon" href="https://funty.org/assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e818a9840c.js" crossorigin="anonymous"></script>
+    <meta name="author" content="Funty" />
+    <meta name="description" content="Die offizielle Website für die Minecraft Projektreihe &bdquo;Masters of Crafters&ldquo;" />
+    <meta name="keywords" content="funty, Masters of Crafters, moc, Website, Minecraft, Projekt, reihe, offiziell" />
+</head>
+
+<body class="darkmode">
+
+    <div id="backgroundImage"></div>
+    <h1 class="shine">Masters of Crafters</h1>
+
+    <div class="container">
+        <h2 class="title">Masters of Crafters 3 endete vor:</h2>
+        <ul>
+            <li><span id="days">??</span>Tagen</li>
+            <li><span id="hours">??</span>Stunden</li>
+            <li><span id="minutes">??</span>Minuten</li>
+            <li><span id="seconds">??</span>Sekunden</li>
+        </ul>
+    </div>
+
+    <div id="scrollHint" onclick="scrollHint()">
+        <i class="fas fa-chevron-down"></i>
+    </div>
+
+    <div id="content">
         <br>
-        <spam id='title'>Willkommen auf der Website von</spam>
-        <br>
-        <spam id='name'>Masters of Crafters</spam>
-        
-        <br>
-        <br>
-        <div id='countdown'>
-            <br>
-            <spam id='subtitle'>Masters of Crafters 3 endete vor:</spam>
-            <ul>
-                <li><span id="days"></span>Tagen</li>
-                <li><span id="hours"></span>Stunden</li>
-                <li><span id="minutes"></span>Minuten</li>
-                <li><span id="seconds"></span>Sekunden</li>
-          </ul>
-        </div>
-        <br>
-        <center>
-        	<div class="slideshow">
-                <!-- <button id="prev" onclick="prevSlide()"><</button> -->
-        		<img id="slideshowdisplay" class="slides" src="./assets/slideshow/moc1/1.png" style="width: 30%;" >
-                <iframe src="https://discord.com/widget?id=962143170051858452&theme=dark" width="350" height="100%" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-                <!-- <button id="next" onclick="nextSlide()">></button> -->
-        	</div>
-    	</center>
-        <br>
-        <br>
-        <br>
-        <div id='para'>
-            <img id='paraImg' src="./assets/logos/moc3.png" style="width:10%">
-            <div id='paraText'>
-                <h2 id='paraTitle'>Masters of Crafters 3</h2>
-                <p style="text-align: left;">Konzept: 
-                    <span style="color: #fc9434;">SMP</span>
-                    <span style="color: #808080;">(Survival Multiplayer)</span>
-                    <br>Version: 
-                    <span style="color: #fc9434;"></span>
-                    <span style="color: #fc9434;">1.19 Java & Bedrock Editon</span>
-                    <br>Mitspieler¹: 
-                    <span style="color: #fc9434;">95</span>
-                    <br>Von: 
-                    <span style="color: #fc9434;">05.08.2022</span>
-                    <br>Bis: 
-                    <span style="color: #fc9434;">26.11.2022</span>
-                    <br>Dauer: 
-                    <span style="color: #fc9434;">114 Tage</span>
+        <div id="infoDiv">
+            <div class="container" id="infoTextDiv">
+                <h2 class="title">Masters of Crafters</h2>
+                <p>Masters of Crafters ist eine Minecraft Projektreihe. 
+                    <br>
+                    Sie basiert auf das Spielprinzip SMP (Survival Multiplayer). 
+                    <br>
+                    Auf dieser Website findest du alle Infos zu den bisherigen Staffeln.
                 </p>
-                    <p id='paraDescription'>Download: 
-                        <a style="color: #fc9434;" href="https://drive.google.com/file/d/1LA1O8ABU8xNO1wfqJL_wAPHeHSBNwS7i/view?usp=share_link">Complete map,</a>
-                        <a style="color: #fc9434;" href="https://drive.google.com/file/d/1lZR79x6h4xn5gteZ0emyqaJWt9_5LRIS/view?usp=share_link">Map without end,</a>
-                        <a style="color: #fc9434;" href="https://drive.google.com/file/d/1CmusX1nUdi0DdvU1rSnbsk0cSLG0jXl7/view?usp=share_link">Trimmed map</a>
+            </div>
+            <iframe class="" id="discordIframe" src="https://discord.com/widget?id=962143170051858452&theme=dark" width="350" height="100%" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+               
+        </div>
+
+        <br>
+        <div id="seasons">
+
+            <div class="container season" id="season3">
+                <img src="./assets/logos/moc3.png" alt="moc3 logo" class="seasonLogo">
+                <div class="seasonDiv">
+                    <h2 class="title season">Masters of Crafters 3</h2>
+                    <p>
+                        Version: <span class="title">1.19 Java & Bedrock Editon</span><br>
+                        Start: <span class="title">05.08.2022</span><br>
+                        Ende: <span class="title">26.11.2022</span><br>
+                        Teilnehmer: <span class="title">95</span><br>
                     </p>
-                </p>
+                </div>
+                <button class="button" onclick="window.location.href='https://mastersofcrafters.de/moc'">Mehr erfahren</button>
             </div>
-
-        </div>
-        <br>
-        <div id='para'>
-            <img id='paraImg' src="./assets/logos/moc2.png" style="width:10%">
-            <div id='paraText'>
-                <h2 id='paraTitle'>Masters of Crafters 2</h2>
-                <p style="text-align: left;">Konzept: 
-                    <span style="color: #fc9434;">SMP</span>
-                    <span style="color: #808080;">(Survival Multiplayer)</span>
-                    <br>Version: 
-                    <span style="color: #fc9434;"></span>
-                    <span style="color: #fc9434;">1.17 Java & Bedrock Editon</span>
-                    <br>Mitspieler¹: 
-                    <span style="color: #fc9434;">96</span>
-                    <br>Von: 
-                    <span style="color: #fc9434;">26.06.2021</span>
-                    <br>Bis: 
-                    <span style="color: #fc9434;">13.11.2021</span>
-                    <br>Dauer: 
-                    <span style="color: #fc9434;">141 Tage</span>
-                </p>
-                <p id='paraDescription'>Download: 
-                    <a style="color: #fc9434;" href="https://download1594.mediafire.com/ti5yxjm2hvfg/2poevciqikpf8an/world.zip">WORLD</a>
-                </p>
-            </div>
-        </div>
-        <br>
-        <div id='para'>
-            <img id='paraImg' src="./assets/logos/moc1.png" style="width:10%">
-            <div id='paraText'>
-                <h2 id='paraTitle'>Masters of Crafters 1</h2>
-                <p style="text-align: left;">Konzept: 
-                    <span style="color: #fc9434;">SMP</span>
-                    <span style="color: #808080;">(Survival Multiplayer)</span>
-                    <br>Version: 
-                    <span style="color: #fc9434;"></span>
-                    <a style="color: #fc9434;" href="https://www.minecraft.net/de-de/article/minecraft-java-edition-1-16-4">1.16.4 Java Editon</a>
-                    <br>Mitspieler: 
-                    <span style="color: #fc9434;">67</span>
-                    <br>Von: 
-                    <span style="color: #fc9434;">05.04.2020</span>
-                    <br>Bis: 
-                    <span style="color: #fc9434;">18.01.2021</span>
-                    <br>Dauer: 
-                    <span style="color: #fc9434;">289 Tage</span>
-                </p>
-                <p id='paraDescription'>Download: 
-                    <a style="color: #fc9434;" href="https://download1639.mediafire.com/c2jipqo4ruwg/7h33ss4fz3vssmt/overworld.zip">OVERWORLD,</a>
-                    <a style="color: #fc9434;" href="https://download1510.mediafire.com/7z1u5q6bx2fg/dhudczo88y9q4f6/nether.zip">NETHER,</a>
-                    <a style="color: #fc9434;" href="https://download943.mediafire.com/ytywz3kt7l3g/17xyum8zoxpycgu/end.zip">END</a>
-                </p>
-            </div>
-        
-
-            <!-- <div id="images">
-                <img  class="image" src="./assets/slideshow/moc1/1.png" style="width:10%">
-                <img  class="image" src="./assets/slideshow/moc1/2.png" style="width:10%">
-                <img  class="image" src="./assets/slideshow/moc1/3.png" style="width:10%">
-                <img  class="image" src="./assets/slideshow/moc1/4.png" style="width:10%">
-                <img  class="image" src="./assets/slideshow/moc1/5.png" style="width:10%">
-                
-            </div> -->
             
+            <div class="container season" id="season2">
+                <img src="./assets/logos/moc2.png" alt="moc2 logo" class="seasonLogo">
+                <div class="seasonDiv">
+                    
+                    <h2 class="title season">Masters of Crafters 2</h2>
+                    <p>
+                        Version: <span class="title">1.17 Java & Bedrock Editon</span><br>
+                        Start: <span class="title">26.06.2021</span><br>
+                        Ende: <span class="title">13.11.2021</span><br>
+                        Teilnehmer: <span class="title">96</span><br>
+                    </p>
+                </div>
+                <button class="button" onclick="window.location.href='https://mastersofcrafters.de/moc'">Mehr erfahren</button>
+            </div>
+
+            <div class="container season" id="season1">
+                <img src="./assets/logos/moc1.png" alt="moc1 logo" class="seasonLogo">
+                <div class="seasonDiv">
+                    
+                    <h2 class="title season">Masters of Crafters 1</h2>
+                    <p>
+                        Version: <span class="title">1.16.4 Java Editon</span><br>
+                        Start: <span class="title">05.04.2020</span><br>
+                        Ende: <span class="title">18.01.2021</span><br>
+                        Teilnehmer: <span class="title">67</span><br>
+                    </p>
+                </div>
+                <button class="button" onclick="window.location.href='https://mastersofcrafters.de/moc'">Mehr erfahren</button>
+            </div>
+
         </div>
-        <p style="color: #808080; font-size: 15px;">¹Anzahl der Accounts auf der Whitelist.</p>
-    </body>
+
+    </div>
+
+
+    <div id="navbar">
+            <a title="Home" class="navItem" onclick="navClick(this)" href="#"><i class="fas fa-home"></i></a>
+            
+            <a title="Info" class="navItem" onclick="navClick(this)" href="#infoDiv"><i class="fas fa-info-circle"></i></a>
+            
+        <div id="navSeasons"> 
+            
+                <a title="Masters of Crafters 3" class="navItem" onclick="navClick(this)" href="#season3"><img src="./assets/logos/moc3.png" alt="moc3" ></a>
+                
+                <a title="Masters of Crafters 2" class="navItem" onclick="navClick(this)" href="#season2"><img src="./assets/logos/moc2.png" alt="moc2" ></a>
+                
+                <a title="Masters of Crafters 1" class="navItem" onclick="navClick(this)" href="#season1"><img src="./assets/logos/moc1.png" alt="moc1" ></a>
+                
+        </div>
+
+    </div>
+
+</body>
+
 </html>
