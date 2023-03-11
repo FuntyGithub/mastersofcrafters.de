@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     let bgMoc = Math.floor(Math.random() * screenshots.length);
     let bgScreenshot = Math.floor(Math.random() * screenshots[bgMoc]) + 1;
-    document.getElementById('backgroundImage').style.backgroundImage = `url(./assets/screenshots/moc${bgMoc + 1}/${bgScreenshot}.png)`;
+    document.getElementById('backgroundImage').style.backgroundImage = `url(./assets/screenshots/moc${bgMoc + 1}/${bgScreenshot}.webp)`;
 
     // count down timer
     const second = 1000,
