@@ -1,8 +1,3 @@
-const screenshots = [ // amount of screenshots 
-    5,      // moc 1
-    15,     // moc 2
-];
-
 document.addEventListener('DOMContentLoaded', () => {
     let bgMoc = Math.floor(Math.random() * screenshots.length);
     let bgScreenshot = Math.floor(Math.random() * screenshots[bgMoc]) + 1;
