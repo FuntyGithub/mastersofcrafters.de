@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Masters of Crafters 2</title>
+    <script src="script.js"></script>
+    <script src="../assets/utils.js"></script>
+    <link rel="icon" href="https://funty.org/assets/logo.png">
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e818a9840c.js" crossorigin="anonymous"></script>
+    <meta name="author" content="Funty" />
+    <meta name="description" content="Alle infos zu Masters of Crafters 2" />
+    <meta name="keywords" content="funty, Masters of Crafters, moc, Website, Minecraft, Projekt, reihe, offiziell, season2, moc2" />
+    <meta property="og:image" content="../assets/logos/moc2.png" />
+</head>
+
+<body class="darkmode">
+
+    <div id="backgroundImage"></div>
+
+    <div id="header">
+        <img src="../assets/logos/moc2.png" alt="Logo" class="logo">
+        <h1 class="shine">Masters of Crafters 2</h1>
+    </div>
+    <div id="index">
+
+        <!-- <div id="puffer"> </div> -->
+
+        <div id="b1" class="container">
+            <div id="b1Div1">
+                <div>
+                    <div class="inlineDiv">
+                        <h3 class="title">Downloads</h3>
+                        <div>
+                            <a class="button" href="https://download1594.mediafire.com/ti5yxjm2hvfg/2poevciqikpf8an/world.zip">
+                                <i class="fas fa-download"></i>
+                                World
+                            </a>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="vl" style="height: 0px; width: 100%;"></div>
+
+                    <div class="inlineDiv">
+                        <h3 class="title">Spieler</h3>
+        
+                        <svg id="playerStats">
+        
+                            <g>
+                                <text class="outRect" x="10" y="50">Accounts auf der Whitelist</text>
+                                <rect x="155" y="35" width="100px"/>
+                                <text class="inRect" x="165" y="50">96</text>
+                            </g>
+        
+                            <g>
+                                <text class="outRect" x="10" y="80">Java Accounts</text>
+                                <rect x="155" y="65" width="72px"/>
+                                <text class="inRect" x="165" y="80">69</text>
+                            </g>
+        
+                            <g>
+                                <text class="outRect" x="10" y="110">Bedrock Accounts</text>
+                                <rect x="155" y="95" width="28px"/>
+                                <text class="inRect" x="165" y="110">27</text>
+                            </g>
+        
+                            <line x1="155" y1="10" x2="155" y2="140" stroke-width="2" stroke="var(--text-color2)" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="vl" style="height: 500px; width: 0px;"></div>
+
+                <div id="screenshotDIV">
+                    <i id="screenshotLeft" class="fas fa-arrow-left" onclick="screenshot(-1)"></i>
+                    <img src="../assets/screenshots/moc2/1.webp" alt="Screenshot" id="screenshot">
+                    <i id="screenshotRight" class="fas fa-arrow-right" onclick="screenshot(1)"></i>
+                </div>
+            </div>
+            
+            <!-- <br> -->
+            <div class="vl" style="height: 0px; width: 100%;"></div>
+
+            <div class="inlineDiv">
+                
+                <h3 class="title">Dauer</h3>
+                <div>
+                    <div id="durBeam">
+                        <span class="title">26.06.2021</span>
+                        <div id="durationDiv"> 
+                            <div id="durationBeam" class="paused" onmouseover="hoverShine(this)"></div>
+                            <span class="title">141 Tage</span>
+                        </div>
+                        <span class="title">13.11.2021</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Masters of Crafters 1</title>
+    <script src="script.js"></script>
+    <script src="../assets/utils.js"></script>
+    <link rel="icon" href="https://funty.org/assets/logo.png">
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e818a9840c.js" crossorigin="anonymous"></script>
+    <meta name="author" content="Funty" />
+    <meta name="description" content="Alle infos zu Masters of Crafters 1" />
+    <meta name="keywords" content="funty, Masters of Crafters, moc, Website, Minecraft, Projekt, reihe, offiziell, season1, moc1" />
+    <meta property="og:image" content="../assets/logos/moc1.png" />
+</head>
+
+<body class="darkmode">
+
+    <div id="backgroundImage"></div>
+
+    <div id="header">
+        <img src="../assets/logos/moc1.png" alt="Logo" class="logo">
+        <h1 class="shine">Masters of Crafters 1</h1>
+    </div>
+    <div id="index">
+
+        <!-- <div id="puffer"> </div> -->
+
+        <div id="b1" class="container">
+            <div id="b1Div1">
+                <div>
+                    <div class="inlineDiv">
+                        <h3 class="title">Downloads</h3>
+                        <div>
+                            <a class="button" href="https://download1639.mediafire.com/c2jipqo4ruwg/7h33ss4fz3vssmt/overworld.zip">
+                                <i class="fas fa-download"></i>
+                                Overworld
+                            </a>
+        
+                            <a class="button" href="https://download1510.mediafire.com/7z1u5q6bx2fg/dhudczo88y9q4f6/nether.zip">
+                                <i class="fas fa-download"></i>
+                                Nether
+                            </a>
+                
+                            <a class="button" href="https://download943.mediafire.com/ytywz3kt7l3g/17xyum8zoxpycgu/end.zip">
+                                <i class="fas fa-download"></i>
+                                End
+                            </a>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="vl" style="height: 0px; width: 100%;"></div>
+
+                    <div class="inlineDiv">
+                        <h3 class="title">Spieler</h3>
+        
+                        <svg id="playerStats">
+        
+                            <g>
+                                <text class="outRect" x="10" y="50">Accounts auf der Whitelist</text>
+                                <rect x="155" y="35" width="100px"/>
+                                <text class="inRect" x="165" y="50">67</text>
+                            </g>
+        
+                            <g>
+                                <text class="outRect" x="10" y="80">Java Accounts</text>
+                                <rect x="155" y="65" width="100px"/>
+                                <text class="inRect" x="165" y="80">67</text>
+                            </g>
+        
+                            <g>
+                                <text class="outRect" x="10" y="110">Bedrock Accounts</text>
+                                <rect x="155" y="95" width="0px"/>
+                                <text class="inRect empty" x="165" y="110">Wurde nicht unterstützt</text>
+                            </g>
+        
+                            <line x1="155" y1="10" x2="155" y2="140" stroke-width="2" stroke="var(--text-color2)" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="vl" style="height: 500px; width: 0px;"></div>
+
+                <div id="screenshotDIV">
+                    <i id="screenshotLeft" class="fas fa-arrow-left" onclick="screenshot(-1)"></i>
+                    <img src="../assets/screenshots/moc1/1.webp" alt="Screenshot" id="screenshot">
+                    <i id="screenshotRight" class="fas fa-arrow-right" onclick="screenshot(1)"></i>
+                </div>
+            </div>
+            
+            <!-- <br> -->
+            <div class="vl" style="height: 0px; width: 100%;"></div>
+
+            <div class="inlineDiv">
+                
+                <h3 class="title">Dauer</h3>
+                <div>
+                    <div id="durBeam">
+                        <span class="title">05.04.2020</span>
+                        <div id="durationDiv"> 
+                            <div id="durationBeam" class="paused" onmouseover="hoverShine(this)"></div>
+                            <span class="title">289 Tage</span>
+                        </div>
+                        <span class="title">18.01.2021</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>
