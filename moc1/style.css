@@ -1,20 +1,10 @@
 html {
     scroll-behavior: smooth;
 }
-/* .darkmode {
-    --bg-color: #252525;
-    --text-color: #d4761d;
-    --text-color2: #fc9434;
-    --text-shine: #ffc895;
-    --border-color: #836b00;
+
+body {
+    color: var(--text-color);
 }
-.lightmode {
-    --bg-color: #dadada;
-    --text-color: #d4761d;
-    --text-color2: #fc9434;
-    --text-shine: #ffc895;
-    --border-color: #836b00;
-} */
 
 #backgroundImage {
     filter: blur(25px);
@@ -35,66 +25,70 @@ html {
 }
 
 .logo {
-    margin: 10px;
+    /* margin: 10px; */
     width: 100px;
     height: 100px;
-    box-shadow: 0 0 10px var(--text-color2);
+    box-shadow: 0 0 10px var(--bg-color);
     border: 2px solid var(--text-color);
     transition: 0.5s;
-
+}
+#logoImg {
+    transform: translateZ(50px);
+    margin: 0px;
+    padding: 0px;
+}
+#logoArrow {
+    transform: rotateY(90deg) translateZ(-50px);
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: var(--bg-color);
+}
+#logoCube {
+    display: flex;
+    margin: 10px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+#logoCube:hover {
+    transform: rotateY(-90deg);
 }
 
-.logo:hover {
-    transition: 0.5s;
-    transform: scale(1.025);
-    box-shadow: 0 0 25px var(--text-color2);
+
+#index::-webkit-scrollbar {
+    background-color: #252525a7;
 }
+
+#index::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color);
+}
+
+/*fine until this*/
 
 #index {
     position: relative;
     top: 120px;
     height: calc(100vh - 120px);
     overflow: auto;
-    /* margin-left: 10px; */
     
-    /* display: grid; */
-    /* grid-template-areas:  */
-    /* "puffer puffer" */
-    /* "b1 b1" */
-    /* "a2 a2"; */
-    justify-content: space-around;
-    align-items: center;
-    grid-gap: 50px;
-
-}
-
-/* #puffer {
-    grid-area: puffer;
-    width: 100%;
-    height: 50px;
-} */
-
-/* #a1 {
-    grid-area: a1;
-} */
-
-#a2 {
-    grid-area: a2;
-}
-
-#b1 {
-    grid-area: b1;
-    width: 90%;
-    margin-top: 30px;
-}
-
-#b1 > div#b1Div1 {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
 }
+
+.section {
+    box-shadow: 0 0 10px var(--text-color2);
+    border-radius: 15px;
+    margin: 20px;
+    background-color: #252525a7;
+}
+
 
 #screenshotDIV {
     padding: 15px;
@@ -104,64 +98,11 @@ html {
     align-items: center;
 }
 
-#index::-webkit-scrollbar {
-    background-color: #252525a7;
-}
-
-#index::-webkit-scrollbar-thumb {
-    background-color: var(--bg-color);
-    
-}
-
-.title {
-    margin-bottom: 10px;
-}
-
 a.button {
     text-decoration: none;
+    margin: 10px;
 }
 
-#durationBeam {
-    height: 10px;
-    width: calc(289px *2);
-    background-color: var(--bg-color);
-    margin: 20px;
-    margin-top: 10px;
-    border-radius: 10px;
-    border: 2px solid var(--text-color);
-    box-shadow: 0 0 10px var(--text-color2);
-    /* animation: 1s slide; */
-    /* transition: 2s; */
-}
-
-#durationBeam:hover {
-    
-    background: linear-gradient(45deg, var(--text-color2) 0%, var(--text-color2) 40%, var(--text-shine) 50%, var(--text-color2) 60%, var(--text-color2) 100%);
-    background-size: 800% 400%;
-
-    animation: shine 20s infinite;
-}
-
-@keyframes slide {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: default;
-    }
-}
-
-#durationDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#durBeam {
-    display: flex;
-    flex-direction: row;
-    /* align-items: center; */
-}
 
 #screenshot {
     width: calc(1920px * 0.5);
@@ -197,16 +138,6 @@ a.button {
     background-color: var(--text-color);
 }
 
-.vl {
-    /* height: 100%; */
-    border: 2px solid var(--text-color2);
-    opacity: 0.25;
-    margin-left: 10px;
-    margin-right: 10px;
-
-    box-shadow: 0 0 10px var(--text-color2);
-
-}
 
 .inlineDiv {
     padding: 0px;
@@ -244,14 +175,6 @@ a.button {
     padding: 5px;
 }
 
-@keyframes statsText {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
 .paused {
     animation-play-state: paused !important;
@@ -260,12 +183,24 @@ a.button {
 #playerStats text.empty {
     fill: var(--text-color);
 
+} 
+
+
+
+@keyframes slide {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: default;
+    }
 }
 
-/* #durDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 500px; */
-/* } */
+@keyframes statsText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

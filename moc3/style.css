@@ -131,8 +131,6 @@ a.button {
     border-radius: 10px;
     border: 2px solid var(--text-color);
     box-shadow: 0 0 10px var(--text-color2);
-    /* animation: 1s slide; */
-    /* transition: 2s; */
 }
 
 #durationBeam:hover {
@@ -161,7 +159,6 @@ a.button {
 #durBeam {
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
 }
 
 #screenshot {
@@ -199,7 +196,6 @@ a.button {
 }
 
 .vl {
-    /* height: 100%; */
     border: 2px solid var(--text-color2);
     opacity: 0.25;
     margin-left: 10px;
@@ -262,11 +258,3 @@ a.button {
     fill: var(--text-color);
 
 }
-
-/* #durDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 500px; */
-/* } */
