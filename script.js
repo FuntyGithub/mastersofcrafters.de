@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hour = minute * 60,
     day = hour * 24
     var x
-    let startday = "November 26, 2022 20:00:00"
+    let startday = "November 11, 2023 16:00:00"
     countDown = new Date(startday).getTime()
     x = setInterval(function () {
         let now = new Date().getTime();
