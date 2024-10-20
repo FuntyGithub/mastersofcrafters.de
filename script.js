@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
     hour = minute * 60,
     day = hour * 24
     var x
-    let startday = "November 11, 2023 16:00:00"
+    let startday = "October 20, 2024 00:00:00"
     countDown = new Date(startday).getTime()
     x = setInterval(function () {
         let now = new Date().getTime();
-        // distance = countDown - now;
+        distance = countDown - now;
 
 
         var delta = Math.abs(countDown - now) / 1000;

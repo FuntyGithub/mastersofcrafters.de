@@ -1,0 +1,260 @@
+html {
+    scroll-behavior: smooth;
+}
+/* .darkmode {
+    --bg-color: #252525;
+    --text-color: #d4761d;
+    --text-color2: #fc9434;
+    --text-shine: #ffc895;
+    --border-color: #836b00;
+}
+.lightmode {
+    --bg-color: #dadada;
+    --text-color: #d4761d;
+    --text-color2: #fc9434;
+    --text-shine: #ffc895;
+    --border-color: #836b00;
+} */
+
+#backgroundImage {
+    filter: blur(25px);
+}
+
+#header {
+    background-color: #252525a7;
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid var(--bg-color);
+}
+
+.logo {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 10px var(--text-color2);
+    border: 2px solid var(--text-color);
+    transition: 0.5s;
+
+}
+
+.logo:hover {
+    transition: 0.5s;
+    transform: scale(1.025);
+    box-shadow: 0 0 25px var(--text-color2);
+}
+
+#index {
+    position: relative;
+    top: 120px;
+    height: calc(100vh - 120px);
+    overflow: auto;
+    /* margin-left: 10px; */
+    
+    /* display: grid; */
+    /* grid-template-areas:  */
+    /* "puffer puffer" */
+    /* "b1 b1"
+    "a2 a2"; */
+
+    justify-content: space-around;
+    align-items: center;
+    /* grid-gap: 50px; */
+
+}
+
+/* #puffer {
+    grid-area: puffer;
+    width: 100%;
+    height: 50px;
+} */
+
+/* #a1 {
+    grid-area: a1;
+} */
+
+#a2 {
+    grid-area: a2;
+}
+
+#b1 {
+    grid-area: b1;
+    width: 90%;
+    margin-top: 30px;
+}
+
+#b1 > div#b1Div1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#screenshotDIV {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#index::-webkit-scrollbar {
+    background-color: #252525a7;
+}
+
+#index::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color);
+    
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+a.button {
+    text-decoration: none;
+}
+
+#durationBeam {
+    height: 10px;
+    width: calc(344px *2);
+    background-color: var(--bg-color);
+    margin: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--text-color);
+    box-shadow: 0 0 10px var(--text-color2);
+}
+
+#durationBeam:hover {
+    
+    background: linear-gradient(45deg, var(--text-color2) 0%, var(--text-color2) 40%, var(--text-shine) 50%, var(--text-color2) 60%, var(--text-color2) 100%);
+    background-size: 800% 400%;
+
+    animation: shine 20s infinite;
+}
+
+@keyframes slide {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: default;
+    }
+}
+
+#durationDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#durBeam {
+    display: flex;
+    flex-direction: row;
+}
+
+#screenshot {
+    width: calc(1920px * 0.5);
+    height: calc(1057px * 0.5);
+    border-radius: 10px;
+    border: 2px solid var(--text-color);
+    box-shadow: 0 0 10px var(--text-color2);
+    margin: 10px;
+}
+
+
+#screenshotLeft, #screenshotRight {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--text-color);
+    box-shadow: 0 0 10px var(--text-color2);
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+#screenshotLeft:hover, #screenshotRight:hover {
+    transition: 0.5s;
+    transform: scale(1.025);
+    box-shadow: 0 0 25px var(--text-color2);
+    background-color: var(--bg-color);
+}
+
+#screenshotLeft:active, #screenshotRight:active {
+    transition: 0.5s;
+    transform: scale(0.95);
+    color: var(--bg-color);
+    background-color: var(--text-color);
+}
+
+.vl {
+    border: 2px solid var(--text-color2);
+    opacity: 0.25;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    box-shadow: 0 0 10px var(--text-color2);
+
+}
+
+.inlineDiv {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#playerStats rect {
+    animation: 5s slide;
+    fill: var(--text-color);
+    height: 20px;
+    transition: 0.5s;
+}
+
+#playerStats rect:hover {
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+#playerStats text.inRect {
+    animation: 2s statsText 1s forwards;
+    opacity: 0;
+    fill: var(--bg-color);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#playerStats text.outRect {
+    fill: var(--text-color);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+@keyframes statsText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.paused {
+    animation-play-state: paused !important;
+}
+
+#playerStats text.empty {
+    fill: var(--text-color);
+
+}
