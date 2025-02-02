@@ -1,5 +1,5 @@
 var moc = 4;
-var screenshotN = 1;
+var screenshotN = 12;
 
 document.addEventListener('DOMContentLoaded', function() {
     let bgScreenshot = Math.floor(Math.random() * screenshots[moc-1]) + 1
