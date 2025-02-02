@@ -44,7 +44,7 @@ h1 {
 
 h1:hover {
     transition: 0.5s;
-    transform: scale(1.025);
+    transform: scale(1.005);
 }
 
 #backgroundImage {
@@ -79,8 +79,11 @@ h1:hover {
 }
 .container:hover, .seasonContainer:hover {
     box-shadow: 0 0 25px var(--text-color2);
-    transform: scale(1.025);
+    transform: scale(1.005);
     transition: 0.5s;
+}
+.seasonContainer:hover {
+    cursor: pointer;
 }
 
 li {
@@ -203,6 +206,7 @@ li span {
     height: fit-content;
     width: fit-content;
     margin: auto;
+    background-color: #1b1b1a;
 }
 
 #discordIframe {
@@ -310,7 +314,7 @@ li span {
     flex-direction: row;
 
     margin: 0 auto;
-    background-color: #252525a7;
+    background-color: #1b1b1a;
     border-radius: 10px;
     border: 2px solid var(--border-color);
     box-shadow: 0 0 10px var(--text-color2);
