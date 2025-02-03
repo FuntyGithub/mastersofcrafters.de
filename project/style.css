@@ -95,7 +95,7 @@ body {
 }
 
 #screenshot {
-    width: 50%;
+    width: 70%;
     min-width: 300px;
     border-radius: 10px;
     border: 2px solid var(--text-color);
@@ -113,12 +113,19 @@ body {
     justify-content: center;
     align-items: center;
 }
+#screenshotsOverview {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
 #index {
     position: relative;
     top: 120px;
     height: calc(100vh - 120px);
     overflow: auto;
+    overflow-x: hidden;
     
     display: flex;
     flex-wrap: wrap;
@@ -144,33 +151,6 @@ body {
     align-items: center;
 }
 
-/* #logoImg {
-    transform: translateZ(50px);
-    margin: 0px;
-    padding: 0px;
-}
-#logoArrow {
-    transform: rotateY(90deg) translateZ(-50px);
-    margin: 0px;
-    padding: 0px;
-    background-color: var(--text-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    color: var(--bg-color);
-}
-#logoCube {
-    display: flex;
-    margin: 10px;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-}
-#logoCube:hover {
-    transform: rotateY(-90deg);
-} */
-
-
 #index::-webkit-scrollbar {
     background-color: #252525a7;
 }
@@ -181,12 +161,10 @@ body {
 
 /*fine until this*/
 
-
 a.button {
     text-decoration: none;
     margin: 10px;
 }
-
 
 #playerStats rect {
     animation: 5s slide;
@@ -215,17 +193,10 @@ a.button {
     padding: 5px;
 }
 
-
-.paused {
-    animation-play-state: paused !important;
-}
-
 #playerStats text.empty {
     fill: var(--text-color);
 
 } 
-
-
 
 @keyframes slide {
     0% {
@@ -242,5 +213,20 @@ a.button {
     }
     100% {
         opacity: 1;
+    }
+}
+
+/* temp solution */
+@media screen and (max-width: 970px) {
+    #overview {
+        flex-wrap: wrap;
+    }
+    #title {
+        font-size: 50px;
+    }
+}
+@media screen and (max-width: 530px) {
+    #title {
+        font-size: 30px;
     }
 }
