@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <title>Masters of Crafters - Project infos</title>
-    <meta name="description" content="Auf dieser Seite findest du alle Informationen über ein bestimmtes Masters of Crafters Projekt."/>
+    <meta name="description"
+        content="Auf dieser Seite findest du alle Informationen über ein bestimmtes Masters of Crafters Projekt." />
 
     <link rel="icon" href="https://funty.org/assets/logo.png">
     <meta name="author" content="Funty#8818" />
@@ -12,9 +14,8 @@
 
     <script src="script.js"></script>
     <script src="../assets/projects.js"></script>
-    <script src="https://kit.fontawesome.com/e818a9840c.js" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="../style.css"/>
+
+    <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,87 +25,77 @@
 
     <div id="header">
         <div id="logo">
-            
+
             <img src="../assets/logos/moc1.png" alt="Logo" id="logoImg">
 
-            <div id="logoArrow" onclick="window.history.back()" title="Zur&uuml;ck">
-                <i class="fas fa-arrow-left"></i>
+            <div id="logoArrow" onclick="window.location.href = 'https\:\/\/mastersofcrafters.de/'" title="Zur&uuml;ck">
+                <img src="../assets/icons/left-long-solid.svg" alt="⬅" id="arrowImg" class="icon">
             </div>
         </div>
-        
+
         <h1 id="title" class="shine">Masters of Crafters</h1>
     </div>
 
     <div id="index">
 
-        <div id="screenshotDIV" class="section container">
-            <i id="screenshotLeft" class="fas fa-arrow-left" onclick="screenshot(-1)"></i>
+        <div id="overview" class="section">
+            <img id="screenshotLeft" class="icon" src="../assets/icons/left-long-solid.svg" alt="⬅">
             <img src="../assets/screenshots/moc1/1.webp" alt="Screenshot" id="screenshot">
-            <i id="screenshotRight" class="fas fa-arrow-right" onclick="screenshot(1)"></i>
-        </div>
+            <img id="screenshotRight" class="icon" src="../assets/icons/right-long-solid.svg" alt="➡">
 
-        <div>
-            <div class="inlineDiv section">
-                <h3 class="title">Downloads</h3>
-                <div>
-                    <a class="button" href="https://download1639.mediafire.com/c2jipqo4ruwg/7h33ss4fz3vssmt/overworld.zip">
-                        <i class="fas fa-download"></i>
-                        Overworld
-                    </a>
-
-                    <a class="button" href="https://download1510.mediafire.com/7z1u5q6bx2fg/dhudczo88y9q4f6/nether.zip">
-                        <i class="fas fa-download"></i>
-                        Nether
-                    </a>
-        
-                    <a class="button" href="https://download943.mediafire.com/ytywz3kt7l3g/17xyum8zoxpycgu/end.zip">
-                        <i class="fas fa-download"></i>
-                        End
-                    </a>
+            <div>
+                <div class="inlineDiv section">
+                    <h3 class="title">Downloads</h3>
+                    <div>
+                        <a class="button" href="" target="_blank" id="downloadButton">
+                            <img src="../assets/icons/up-right-from-square-solid.svg" class="icon">
+                            Download von externer Seite
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            
-            <div class="inlineDiv section">
-                
-                <h3 class="title">Dauer</h3>
-                <p>
-                    <b>Start:&nbsp;&nbsp;&nbsp;</b>05.04.2020<br>
-                    <b>Ende:&nbsp;&nbsp;&nbsp;</b>18.01.2021<br>
-                    <b>Dauer:&nbsp;&nbsp;</b>289 Tage<br>
-                </p>
-    
-            </div>
 
-            <div class="inlineDiv section">
-                <h3 class="title">Spieler</h3>
+                <div class="inlineDiv section">
 
-                <svg id="playerStats">
+                    <h3 class="title">Dauer</h3>
+                    <p>
+                        <b>Start:&nbsp;&nbsp;&nbsp;</b><span id="startDate">?</span><br>
+                        <b>Ende:&nbsp;&nbsp;&nbsp;</b><span id="endDate">?</span><br>
+                        <b>Dauer:&nbsp;&nbsp;</b><span id="duration">?</span><br>
+                    </p>
 
-                    <g>
-                        <text class="outRect" x="10" y="50">Accounts auf der Whitelist</text>
-                        <rect x="155" y="35" width="100px"/>
-                        <text class="inRect" x="165" y="50">67</text>
-                    </g>
+                </div>
 
-                    <g>
-                        <text class="outRect" x="10" y="80">Java Accounts</text>
-                        <rect x="155" y="65" width="100px"/>
-                        <text class="inRect" x="165" y="80">67</text>
-                    </g>
+                <div class="inlineDiv section">
+                    <h3 class="title">Spieler auf der Whitelist</h3>
 
-                    <g>
-                        <text class="outRect" x="10" y="110">Bedrock Accounts</text>
-                        <rect x="155" y="95" width="0px"/>
-                        <text class="inRect empty" x="165" y="110">Wurde nicht unterstützt</text>
-                    </g>
+                    <svg id="playerStats">
 
-                    <line x1="155" y1="10" x2="155" y2="140" stroke-width="2" stroke="var(--text-color2)" />
-                </svg>
+                        <g>
+                            <text class="outRect" x="10" y="50" id="totalText">Accounts insgesamt</text>
+                            <rect x="155" y="35" width="0px" id="totalPlayersRect"/>
+                            <text class="inRect" x="165" y="50" id="totalPlayers">?</text>
+                        </g>
+
+                        <g>
+                            <text class="outRect" x="10" y="80">Java Accounts</text>
+                            <rect x="155" y="65" width="100%" id="javaPlayersRect"/>
+                            <text class="inRect" x="165" y="80" id="javaPlayers">?</text>
+                        </g>
+
+                        <g>
+                            <text class="outRect" x="10" y="110">Bedrock Accounts</text>
+                            <rect x="155" y="95" width="0px" id="bedrockPlayersRect"/>
+                            <text class="inRect" x="165" y="110" id="bedrockPlayers">?</text>
+                        </g>
+
+                        <line x1="155" y1="10" x2="155" y2="140" stroke-width="2" stroke="var(--text-color2)" />
+                    </svg>
+                </div>
+
             </div>
 
         </div>
-
     </div>
 
 </body>
