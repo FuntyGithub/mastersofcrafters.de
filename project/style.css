@@ -24,15 +24,39 @@ body {
     border-bottom: 5px solid var(--bg-color);
 }
 
-.logo {
-    /* margin: 10px; */
-    width: 100px;
-    height: 100px;
+#logo {
+    display: flex;
+    justify-content: right;
     box-shadow: 0 0 10px var(--bg-color);
     border: 2px solid var(--text-color);
     transition: 0.5s;
+    margin: 10px;
 }
-#logoImg {
+#logo > * {
+    width: 100px;
+    height: 100px;
+}
+#logoArrow {
+    position: absolute;
+    width: 0px;
+    overflow: hidden;
+
+    background-color: var(--text-color);
+    color: var(--bg-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    transition: 0.5s;
+}
+#logo:hover > #logoArrow {
+    width: 100px;
+    transition: 0.5s;
+}
+
+
+/* #logoImg {
     transform: translateZ(50px);
     margin: 0px;
     padding: 0px;
@@ -56,7 +80,7 @@ body {
 }
 #logoCube:hover {
     transform: rotateY(-90deg);
-}
+} */
 
 
 #index::-webkit-scrollbar {
